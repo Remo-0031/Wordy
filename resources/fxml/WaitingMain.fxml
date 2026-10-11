@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="960.0" style="-fx-background-color: #58448c;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <ImageView fitHeight="693.0" fitWidth="977.0" layoutX="-6.0" layoutY="-82.0">
+      <Image url="@../assets/GIF/Waiting.gif" />
+   </ImageView>
+   <AnchorPane layoutX="356.0" layoutY="180.0" prefHeight="67.0" prefWidth="249.0">
+      <Text blendMode="MULTIPLY" fill="#9b5cff" layoutX="-1.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="READY!">
+         <font>
+            <Font name="System Bold" size="76.0" />
+         </font>
+      </Text>
+      <Text blendMode="SCREEN" fill="#eaff00" layoutX="-6.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="READY!">
+         <font>
+            <Font name="System Bold" size="76.0" />
+         </font>
+      </Text>
+   </AnchorPane>
+   <Text fill="WHITE" layoutX="288.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WAITING FOR OTHER PLAYERS">
+      <font>
+         <Font name="Pixel Emulator" size="76.0" />
+         <Font size="28.0" />
+      </font>
+   </Text>
+</AnchorPane>

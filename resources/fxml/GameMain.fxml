@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.GameController">
+   <children>
+      <ImageView fitHeight="514.0" fitWidth="869.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/GIF/GameScreen.gif" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="327.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WORDY">
+         <font>
+            <Font name="Pixel Emulator" size="48.0" />
+         </font>
+      </Text>
+      <TableView fx:id="TABLE" layoutX="623.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="PNAMECOL" prefWidth="127.333251953125" text="Player Name" />
+          <TableColumn fx:id="WINCOL" prefWidth="70.666748046875" text="Wins" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn14" contentDisplay="CENTER" layoutX="196.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn9" contentDisplay="CENTER" layoutX="293.0" layoutY="323.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="C" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn8" contentDisplay="CENTER" layoutX="196.0" layoutY="323.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="B" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn10" contentDisplay="CENTER" layoutX="393.0" layoutY="323.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="D" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn7" contentDisplay="CENTER" layoutX="98.0" layoutY="323.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="29.0" style="-fx-background-color: transparent;" text="a" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn13" contentDisplay="CENTER" layoutX="98.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="G" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn15" contentDisplay="CENTER" layoutX="293.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="G" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn16" contentDisplay="CENTER" layoutX="393.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn11" contentDisplay="CENTER" layoutX="490.0" layoutY="323.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="E" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn4" contentDisplay="CENTER" layoutX="350.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="F" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn5" contentDisplay="CENTER" layoutX="449.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn3" contentDisplay="CENTER" layoutX="249.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn2" contentDisplay="CENTER" layoutX="150.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn6" contentDisplay="CENTER" layoutY="323.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn12" contentDisplay="CENTER" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn1" contentDisplay="CENTER" layoutX="44.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn17" contentDisplay="CENTER" layoutX="490.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="H" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="50.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/assets/GIF/WordButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="190.0" fitWidth="183.0" layoutX="631.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/GIF/LSP.gif" />
+         </image>
+      </ImageView>
+      <Text fill="#0e1380" layoutX="67.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="____________________________________" wrappingWidth="484.31640625">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfWord" alignment="CENTER" layoutX="60.0" layoutY="131.0" prefHeight="71.0" prefWidth="484.0" promptText="Type Here" style="-fx-background-color: transparent;">
+         <font>
+            <Font name="Pixel Emulator" size="27.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="60.0" layoutY="70.0" prefHeight="56.0" prefWidth="484.0" text="" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Pixel Emulator" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

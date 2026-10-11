@@ -1,0 +1,85 @@
+module wordyApp{
+
+    exception AccountIsLoggedIn {
+       string reason;
+       };
+
+    exception AccountNotFound {
+       string reason;
+       };
+
+    exception NoOtherPlayersAvailable {
+       string reason;
+      };
+
+     exception WordIsNotValid {
+       string reason;
+      };
+
+     exception WordIsShort {
+       string reason;
+      };
+
+      exception WrongPassword {
+       string reason;
+       };
+       exception NoWinner{
+       string reason;
+       };
+
+    struct Player {
+        string username;
+        string password;
+        string firstName;
+        string lastName;
+        boolean isActive;
+        long wins;
+        string longestWord;
+    };
+
+    typedef sequence<Player> PlayerList;
+
+    struct PlayerRecord {
+        string username;
+        long wins;
+    };
+
+    typedef sequence<PlayerRecord> Records;
+
+    struct Round {
+        long gameID;
+        string winnerUsername;
+        Records players;
+        string letterSet;
+        string gameCreator;
+    };
+
+    typedef sequence<Round> Rounds;
+
+    struct Game {
+        long gameID;
+        PlayerList players;
+        string winnerUsername;
+        long long startTime;
+        boolean started;
+        boolean ended;
+        Records playerRecords;
+    };
+
+    interface Wordy {
+        Player login(in string username, in string password) raises (AccountIsLoggedIn, AccountNotFound, WrongPassword);
+        boolean logout(in string username);
+        long play(in string username) raises (NoOtherPlayersAvailable); // return game if new.
+        long updateWin(in string username, in long win);
+        string updateLongestWord(in string username, in string word);
+        string getLetterSet(in long gameID);//return the wordSet for the gameID
+        boolean submitWord(in long gameID, in string username, in string word) raises (WordIsNotValid, WordIsShort);
+        string getRoundWinner(in long gameID, in string username); // return username.
+        string getWinner(in long gameID, in string username); // return username./
+        PlayerList getLeaderBoardsWins();
+        PlayerList getLeaderBoardsWords();
+        long getTime(in long gameID);
+        boolean isGameCreator(in string username);
+        Records getRoundRecords(in long gameID);
+    };
+};

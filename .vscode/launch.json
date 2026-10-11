@@ -1,0 +1,41 @@
+{
+    // Debug configs (need the "Extension Pack for Java"). orbd must already be running:
+    // run the task "Start Naming Service (orbd)" first.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Server (WordyServer)",
+            "request": "launch",
+            "mainClass": "server.WordyServer",
+            "args": "-ORBInitialPort 1050 -ORBInitialHost localhost",
+            "javaExec": "C:\\Program Files\\Zulu\\zulu-8\\bin\\java.exe",
+            "classPaths": [
+                "${workspaceFolder}/build",
+                "${workspaceFolder}/libraries/mysql-connector-j-8.0.31.jar"
+            ],
+            "preLaunchTask": "Build",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Client (ClientMain)",
+            "request": "launch",
+            "mainClass": "client.ClientMain",
+            "args": "-ORBInitialPort 1050 -ORBInitialHost localhost",
+            "javaExec": "C:\\Program Files\\Zulu\\zulu-8\\bin\\java.exe",
+            "classPaths": ["${workspaceFolder}/build"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Console client (ConsoleVersion)",
+            "request": "launch",
+            "mainClass": "client.ConsoleVersion",
+            "args": "-ORBInitialPort 1050 -ORBInitialHost localhost",
+            "javaExec": "C:\\Program Files\\Zulu\\zulu-8\\bin\\java.exe",
+            "classPaths": ["${workspaceFolder}/build"],
+            "console": "integratedTerminal"
+        }
+    ]
+}

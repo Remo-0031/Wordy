@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.LoginController">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="972.0" layoutX="-3.0" layoutY="-46.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@/assets/GIF/LoginScreen.gif" />
+            <Image url="@../assets/GIF/LoginScreen2.gif" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfUser" layoutX="442.0" layoutY="283.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <PasswordField fx:id="tfPass" layoutX="442.0" layoutY="319.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+      <Label layoutX="349.0" layoutY="282.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="96.0" />
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="351.0" layoutY="318.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Pixel Emulator" size="30.0" />
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError" alignment="CENTER" blendMode="SRC_ATOP" layoutX="280.0" layoutY="245.0" prefWidth="402.0" text="Error: Username or Password is incorrrect!" textFill="#20ffcf">
+         <font>
+            <Font name="Pixel Emulator" size="30.0" />
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LoginLblButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="388.0" layoutY="364.0" prefHeight="65.0" prefWidth="186.0" text="____" textFill="#59ffcf">
+         <font>
+            <Font name="Pixel Emulator" size="17.0" />
+            <Font size="85.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogin" alignment="TOP_CENTER" layoutX="387.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnLoginClicked" prefHeight="71.0" prefWidth="186.0" style="-fx-background-color: transparent;" text="LOGIN" textFill="#5effe5">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="289.0" layoutY="79.0" prefHeight="78.0" prefWidth="373.0">
+         <children>
+            <Label blendMode="MULTIPLY" layoutX="-7.0" layoutY="1.0" text="WORDY" textFill="#39758d">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Label>
+            <Label blendMode="SCREEN" layoutX="5.0" layoutY="4.0" text="WORDY" textFill="#a15228">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Label>
+            <Label text="WORDY" textFill="#e5faff">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

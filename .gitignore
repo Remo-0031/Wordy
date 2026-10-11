@@ -1,0 +1,9 @@
+build/
+bin/
+
+# IntelliJ build output
+out/
+
+# orbd (CORBA naming service) runtime data
+orb.db/
+**/orb.db/

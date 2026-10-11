@@ -1,0 +1,59 @@
+`{
+    // JDK8 must be a Java 8 JDK that bundles JavaFX (jre\lib\ext\jfxrt.jar) and has orbd.exe.
+    // Change it here if your JDK lives elsewhere (also update javaExec in launch.json).
+    "version": "2.0.0",
+    "options": {
+        "env": {
+            "JDK8": "C:\\Program Files\\Zulu\\zulu-8"
+        }
+    },
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "process",
+            "command": "powershell",
+            "args": [
+                "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command",
+                "Remove-Item build -Recurse -Force -ErrorAction SilentlyContinue; New-Item -ItemType Directory build | Out-Null; $src = Get-ChildItem src -Recurse -Filter *.java | ForEach-Object { $_.FullName }; & \"$env:JDK8\\bin\\javac.exe\" -encoding UTF-8 -d build -cp libraries\\mysql-connector-j-8.0.31.jar $src; if ($LASTEXITCODE -ne 0) { exit 1 }; Copy-Item resources\\* build -Recurse -Force; Write-Host 'Build OK'"
+            ],
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": "$javac",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "Start Naming Service (orbd)",
+            "type": "process",
+            "command": "${env:JDK8}\\bin\\orbd.exe",
+            "args": ["-ORBInitialPort", "1050", "-ORBInitialHost", "localhost"],
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "Run Server",
+            "type": "process",
+            "command": "${env:JDK8}\\bin\\java.exe",
+            "args": [
+                "-cp", "build;libraries\\mysql-connector-j-8.0.31.jar",
+                "server.WordyServer",
+                "-ORBInitialPort", "1050", "-ORBInitialHost", "localhost"
+            ],
+            "dependsOn": "Build",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "Run Client",
+            "type": "process",
+            "command": "${env:JDK8}\\bin\\java.exe",
+            "args": [
+                "-cp", "build",
+                "client.ClientMain",
+                "-ORBInitialPort", "1050", "-ORBInitialHost", "localhost"
+            ],
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "new" }
+        }
+    ]
+}

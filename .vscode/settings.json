@@ -1,0 +1,16 @@
+{
+    // Lets the Java extension understand this non-Maven/Gradle project.
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": ["libraries/**/*.jar"],
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Program Files\\Zulu\\zulu-8",
+            "default": true
+        }
+    ],
+    "files.exclude": {
+        "out": true
+    }
+}
